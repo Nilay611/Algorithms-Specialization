@@ -34,6 +34,7 @@ def count_inversions(arr):
 
 
 if __name__ == "__main__":
-    arr = list(map(int, input("Enter an array: ").split()))
-    res = count_inversions(arr)
+    with open("IntegerArray.txt", 'r') as file:
+        numbers = [int(line.strip()) for line in file]
+    res = count_inversions(numbers)
     print(res)
